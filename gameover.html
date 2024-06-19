@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <title>Game Over!</title>
+    <meta charset="utf-8">
+    <style>
+        h1 {
+            color: red;
+        }
+        
+        p {
+            font-size: 2rem;
+            letter-spacing: -1px;
+            position: absolute;
+            margin: 0;
+            top: 400px;
+            right: 100px;
+            color: transparent;
+            text-shadow: 0 0 4px rgb(247, 7, 7);
+        }
+        
+        button {
+            position: absolute;
+            margin: 0;
+            top: 500px;
+            right: 100px;
+            width: 100px;
+            font-weight: bold;
+        }
+        
+        button {
+            /* ブラウザ特有のスタイルを無効に */
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            appearance: none;
+            /* 整える */
+            margin: 1em 0;
+            /* 前後の隙間 */
+            padding: 0.6em 1em;
+            /* 塗りの余白 */
+            font-size: 1em;
+            /* フォントサイズ */
+            background-color: #f76161;
+            /* 背景色 */
+            color: #FFF;
+            /* テキストカラー */
+            cursor: pointer;
+            /* カーソルを指マークに */
+            border-radius: 3px;
+            /* 角の丸み */
+            border: 0;
+            /* 枠線を消す */
+            transition: 0.3s;
+            /* ホバーの変化を滑らかに */
+        }
+        /* ホバー時（カーソルをのせた時）の見た目 */
+        
+        button:hover {
+            background-color: red;
+            /* 背景色 */
+        }
+    </style>
+</header>
+
+<body>
+    <img src="img/gameover.png" width="500px">
+    <p></p>
+
+    <button type='submit'>再挑戦</button>
+
+    <script>
+        const time = location.search.split("=")[1];
+        const para = document.querySelector('p');
+        const button = document.querySelector('button');
+        const img = document.querySelector("img");
+
+        let winWidth = window.innerWidth;
+        let winHeight = window.innerHeight;
+
+        para.textContent = '君は ' + time + ' フレームの間生き残ったぜ!';
+        img.style.width = winWidth + 'px';
+        img.style.height = winHeight + 'px';
+        para.textContent = '生存タイム: ' + time + ' 秒';
+
+        function transferPage() {
+            let mainPage = 'index.html';
+            window.location.href = mainPage;
+        }
+
+        button.addEventListener('click', transferPage)
+        button.focus();
+    </script>
+
+</html>

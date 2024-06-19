@@ -1,0 +1,53 @@
+html,
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+html {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    height: inherit;
+}
+
+h1 {
+    font-size: 2rem;
+    letter-spacing: -1px;
+    position: absolute;
+    margin: 0;
+    top: -4px;
+    right: 5px;
+    color: transparent;
+    text-shadow: 0 0 4px rgb(255, 255, 255);
+}
+
+.time {
+    font-size: 1rem;
+    letter-spacing: -1px;
+    position: absolute;
+    float: right;
+    top: 20px;
+    right: 20px;
+    color: rgb(169, 236, 11);
+}
+
+ul {
+    font-size: 1rem;
+    letter-spacing: -1px;
+    position: absolute;
+    float: right;
+    top: 35px;
+    right: 20px;
+    color: rgb(169, 236, 11);
+}
+
+li {
+    font-size: 1em;
+    list-style: none;
+    float: left;
+    display: inline;
+}
